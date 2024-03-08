@@ -135,11 +135,12 @@ private fun ProfileInfoItem(
   textResourceId: Int,
   modifier: Modifier
 ) {
-  val  color= MaterialTheme.colors
+  val colors = MaterialTheme.colors
 
-  ConstraintLayout (modifier = Modifier){
-    val ( iconRef,amountRef,titleRef) = createRefs()
-    val itemModifier =Modifier
+  ConstraintLayout(modifier = modifier) {
+    val (iconRef, amountRef, titleRef) = createRefs()
+    val itemModifier = Modifier
+
     Icon(
       contentDescription = stringResource(id = textResourceId),
       imageVector = iconAsset,
@@ -150,8 +151,6 @@ private fun ProfileInfoItem(
           start.linkTo(parent.start)
         }
         .padding(start = 16.dp)
-
-
     )
 
     Text(
@@ -178,9 +177,7 @@ private fun ProfileInfoItem(
           bottom.linkTo(iconRef.bottom)
         }
     )
-
   }
-
 }
 
 
