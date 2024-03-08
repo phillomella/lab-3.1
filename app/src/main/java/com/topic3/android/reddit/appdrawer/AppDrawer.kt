@@ -11,7 +11,9 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
@@ -188,7 +190,22 @@ private fun ProfileInfoItem(
  */
 @Composable
 private fun AppDrawerBody(closeDrawerAction: () -> Unit) {
-  //TODO add your code here
+  Column {
+    ScreenNavigationButton(
+      icon = Icons.Filled.AccountBox,
+      label = stringResource(R.string.my_profile),
+      onClickAction = {
+        closeDrawerAction()
+      }
+    )
+    ScreenNavigationButton(
+      icon = Icons.Filled.Home,
+      label = stringResource(R.string.saved),
+      onClickAction = {
+        closeDrawerAction()
+      }
+    )
+  }
 }
 
 /**
